@@ -7,13 +7,53 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    
+    @State var msg = "ありがとう"
+
     var body: some View {
+        
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack {
+                    NavigationLink(destination: OnteiDisplay()){
+                        Text("音程をみえるかしよう。")
+                    }
+                    Divider()
+                }
+                VStack {
+                    NavigationLink(destination: Recorder()){
+                        Text("自分の声を聞いてみよう。")
+                    }
+                    Divider()
+                }
+                VStack {
+                    NavigationLink(destination: KeyBoardOntei()){
+                        Text("キーボードを弾いてみよう。")
+                    }
+                    Divider()
+
+                }.navigationTitle("お品書き")
+
+             
+                
+                
+            }
+        }
+
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button("Tap") {
+                msg = "Thank you!"
+            }
+            .font(.headline)
+            .foregroundColor(.white)
+            .background(
+                Capsule()
+                    .foregroundColor(.green)
+                    .frame(width:80, height: 30)
+            )
+            Text(msg).padding()
         }
         .padding()
     }
