@@ -16,25 +16,44 @@ struct ContentView: View {
         
         NavigationView {
             ScrollView(.vertical, showsIndicators: true) {
+                Divider()
                 VStack {
                     NavigationLink(destination: OnteiDisplay()){
+                        Image("image1")
+                            .resizable()
+                            .frame(width:60, height:60)
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.gray))
                         Text("音程をみえるかしよう。")
+                        Spacer()
                     }
                     Divider()
                 }
                 VStack {
                     NavigationLink(destination: Recorder()){
+                        Image("image2")
+                            .resizable()
+                            .frame(width:60, height:60)
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.gray))
                         Text("自分の声を聞いてみよう。")
+                        Spacer()
                     }
                     Divider()
                 }
                 VStack {
                     NavigationLink(destination: KeyBoardOntei()){
+                        Image("image2")
+                            .resizable()
+                            .frame(width:60, height:60)
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.gray))
                         Text("キーボードを弾いてみよう。")
+                        Spacer()
                     }
                     Divider()
 
-                }.navigationTitle("お品書き")
+                }.navigationTitle(Text("お品書き"))
 
              
                 
