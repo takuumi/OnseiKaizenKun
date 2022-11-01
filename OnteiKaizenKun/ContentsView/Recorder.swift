@@ -69,16 +69,22 @@ struct Recorder: View {
     var body: some View {
         VStack {
             Spacer()
-            Text(conductor.data.isRecording ? "STOP RECORDING" : "RECORD")
+            Text(conductor.data.isRecording ? "録音終了" : "録音開始。")
                 .foregroundColor(.blue)
                 .onTapGesture {
                 conductor.data.isRecording.toggle()
             }
             Spacer()
-            Text(conductor.data.isPlaying ? "STOP" : "PLAY")
-                .foregroundColor(.blue)
-                .onTapGesture {
-                conductor.data.isPlaying.toggle()
+            if(conductor.data.isRecording) {
+                Text("録音中")
+                    .foregroundColor(.gray)
+            } else {
+                Text(conductor.data.isPlaying ? "□ STOP" : "▷ PLAY")
+                    .foregroundColor(.blue)
+                    .onTapGesture {
+                    conductor.data.isPlaying.toggle()
+                }
+
             }
             Spacer()
         }

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var msg = "ありがとう"
+    @State var msg = "押してみて！！"
 
     var body: some View {
         
@@ -19,7 +19,7 @@ struct ContentView: View {
                 Divider()
                 VStack {
                     NavigationLink(destination: OnteiDisplay()){
-                        Image("image1")
+                        Image("image2")
                             .resizable()
                             .frame(width:60, height:60)
                             .clipShape(Circle())
@@ -31,7 +31,7 @@ struct ContentView: View {
                 }
                 VStack {
                     NavigationLink(destination: Recorder()){
-                        Image("image2")
+                        Image("image1")
                             .resizable()
                             .frame(width:60, height:60)
                             .clipShape(Circle())
@@ -62,8 +62,9 @@ struct ContentView: View {
         }
 
         VStack {
+            
             Button("Tap") {
-                msg = "Thank you!"
+                msg = "ドドドヤァ！"
             }
             .font(.headline)
             .foregroundColor(.white)
