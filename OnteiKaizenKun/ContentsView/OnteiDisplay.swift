@@ -96,23 +96,23 @@ struct OnteiDisplay: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Frequency")
+                Text("周波数")
                 Spacer()
                 Text("\(conductor.data.pitch, specifier: "%0.1f")")
             }.padding()
 
             HStack {
-                Text("Amplitude")
+                Text("大きさ")
                 Spacer()
                 Text("\(conductor.data.amplitude, specifier: "%0.1f")")
             }.padding()
 
             HStack {
-                Text("Note Name")
+                Text("音程")
                 Spacer()
                 Text("\(conductor.data.noteNameWithSharps) / \(conductor.data.noteNameWithFlats)")
             }.padding()
-
+            
             InputDevicePicker(device: conductor.initialDevice)
 
             NodeRollingView(conductor.tappableNodeA).clipped()
