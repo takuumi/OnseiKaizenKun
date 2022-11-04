@@ -52,14 +52,23 @@ struct ContentView: View {
                         Spacer()
                     }
                     Divider()
-
-                }.navigationTitle(Text("お品書き"))
-
-             
-                
+                }
+                VStack {
+                    NavigationLink(destination: GraphTestView()){
+                        Image("image1")
+                            .resizable()
+                            .frame(width:60, height:60)
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.gray))
+                        Text("グラフの練習をしよう")
+                        Spacer()
+                    }
+                    Divider()
+                }
                 
             }
-        }
+        }.navigationTitle(Text("お品書き"))
+
 
         VStack {
             

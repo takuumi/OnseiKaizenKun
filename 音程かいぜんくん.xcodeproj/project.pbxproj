@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A20CAFE2915D961007464B0 /* GraphTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A20CAFD2915D961007464B0 /* GraphTestView.swift */; };
 		6A3701C0290DE17E00B48E2B /* OnteiKaizenKunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3701BF290DE17E00B48E2B /* OnteiKaizenKunApp.swift */; };
 		6A3701C2290DE17E00B48E2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3701C1290DE17E00B48E2B /* ContentView.swift */; };
 		6A3701C4290DE17F00B48E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A3701C3290DE17F00B48E2B /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A20CAFD2915D961007464B0 /* GraphTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTestView.swift; sourceTree = "<group>"; };
 		6A3701BC290DE17E00B48E2B /* 音程かいぜんくん.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "音程かいぜんくん.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3701BF290DE17E00B48E2B /* OnteiKaizenKunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnteiKaizenKunApp.swift; sourceTree = "<group>"; };
 		6A3701C1290DE17E00B48E2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				6ABF1213290E415300A21F85 /* Recorder.swift */,
 				6ABF1222290E62AE00A21F85 /* KeyBoardOntei.swift */,
 				6ABF12272913AEA500A21F85 /* PitchRollingView.swift */,
+				6A20CAFD2915D961007464B0 /* GraphTestView.swift */,
 			);
 			path = ContentsView;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				6A3701C2290DE17E00B48E2B /* ContentView.swift in Sources */,
 				6A3701C0290DE17E00B48E2B /* OnteiKaizenKunApp.swift in Sources */,
 				6ABF1214290E415300A21F85 /* Recorder.swift in Sources */,
+				6A20CAFE2915D961007464B0 /* GraphTestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
