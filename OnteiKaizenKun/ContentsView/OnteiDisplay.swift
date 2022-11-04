@@ -23,7 +23,7 @@ class TunerConductor: ObservableObject, HasAudioEngine {
     @Published var data = TunerData()
 
     let engine = AudioEngine()
-    let initialDevice: Device
+    //let initialDevice: Device
 
     let mic: AudioEngine.InputNode
     let tappableNodeA: Fader
@@ -40,9 +40,9 @@ class TunerConductor: ObservableObject, HasAudioEngine {
     init() {
         guard let input = engine.input else { fatalError() }
 
-        guard let device = engine.inputDevice else { fatalError() }
+        //guard let device = engine.inputDevice else { fatalError() }
 
-        initialDevice = device
+        //initialDevice = device
 
         mic = input
         tappableNodeA = Fader(mic)
@@ -113,13 +113,15 @@ struct OnteiDisplay: View {
                 Text("\(conductor.data.noteNameWithSharps) / \(conductor.data.noteNameWithFlats)")
             }.padding()
             
-            InputDevicePicker(device: conductor.initialDevice)
+            //InputDevicePicker(device: conductor.initialDevice)
 
             NodeRollingView(conductor.tappableNodeA).clipped()
 
             NodeOutputView(conductor.tappableNodeB).clipped()
-
+            
             NodeFFTView(conductor.tappableNodeC).clipped()
+            
+            PitchRollingView(value:conductor.data.pitch).clipped()
         }
         .navigationTitle("声のみえるか")
         .onAppear {
