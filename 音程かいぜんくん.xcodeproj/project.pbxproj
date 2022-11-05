@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A038CED2915E48B004A6368 /* LineChartView in Frameworks */ = {isa = PBXBuildFile; productRef = 6A038CEC2915E48B004A6368 /* LineChartView */; };
 		6A20CAFE2915D961007464B0 /* GraphTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A20CAFD2915D961007464B0 /* GraphTestView.swift */; };
 		6A3701C0290DE17E00B48E2B /* OnteiKaizenKunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3701BF290DE17E00B48E2B /* OnteiKaizenKunApp.swift */; };
 		6A3701C2290DE17E00B48E2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3701C1290DE17E00B48E2B /* ContentView.swift */; };
@@ -45,6 +46,7 @@
 				6ABF121D290E4FBB00A21F85 /* AudioKitUI in Frameworks */,
 				6ABF1226290E631800A21F85 /* Keyboard in Frameworks */,
 				6ABF1221290E609E00A21F85 /* SoundpipeAudioKit in Frameworks */,
+				6A038CED2915E48B004A6368 /* LineChartView in Frameworks */,
 				6ABF121A290E4FA400A21F85 /* AudioKitEX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +124,7 @@
 				6ABF121C290E4FBB00A21F85 /* AudioKitUI */,
 				6ABF1220290E609E00A21F85 /* SoundpipeAudioKit */,
 				6ABF1225290E631800A21F85 /* Keyboard */,
+				6A038CEC2915E48B004A6368 /* LineChartView */,
 			);
 			productName = OnteiKaizenKun;
 			productReference = 6A3701BC290DE17E00B48E2B /* 音程かいぜんくん.app */;
@@ -157,6 +160,7 @@
 				6ABF121B290E4FBB00A21F85 /* XCRemoteSwiftPackageReference "AudioKitUI" */,
 				6ABF121F290E609E00A21F85 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
 				6ABF1224290E631800A21F85 /* XCRemoteSwiftPackageReference "Keyboard" */,
+				6A038CEB2915E48B004A6368 /* XCRemoteSwiftPackageReference "LineChartView" */,
 			);
 			productRefGroup = 6A3701BD290DE17E00B48E2B /* Products */;
 			projectDirPath = "";
@@ -407,6 +411,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6A038CEB2915E48B004A6368 /* XCRemoteSwiftPackageReference "LineChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Jonathan-Gander/LineChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		6ABF1215290E4F9100A21F85 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
@@ -450,6 +462,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6A038CEC2915E48B004A6368 /* LineChartView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A038CEB2915E48B004A6368 /* XCRemoteSwiftPackageReference "LineChartView" */;
+			productName = LineChartView;
+		};
 		6ABF1216290E4F9100A21F85 /* AudioKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6ABF1215290E4F9100A21F85 /* XCRemoteSwiftPackageReference "AudioKit" */;

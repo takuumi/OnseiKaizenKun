@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Charts
+import LineChartView
 
 struct Record: Identifiable {
     var id: UUID = UUID()
@@ -22,6 +23,17 @@ var records: [Record] = [
 ]
 
 
+
+var chartParameters = LineChartParameters(
+    data: [
+        LineChartData(42),
+        LineChartData(25.8),
+        LineChartData(88.19),
+        LineChartData(15.0),
+    ]
+)
+
+
 struct GraphTestView: View {
     var body: some View {
         Chart(records) {
@@ -32,6 +44,9 @@ struct GraphTestView: View {
         }
         .frame(height: 200)
         .padding(.horizontal)
+        
+        LineChartView(lineChartParameters: chartParameters)
+        
     }
 }
 
